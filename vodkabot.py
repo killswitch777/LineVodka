@@ -8,9 +8,8 @@ import time, datetime, random ,sys, re, string, os, json
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-client = LineClient()
-client._qrLogin("line://au/q/")
-
+client = LineClient(authToken='jm+SrJW+EkV/gDkHhWheBB9a41fvawPzhCvrVATvtFNIIJiGFd1ZmDGO/BsodCOiMG3P1yao9mNkpZue7/ECaBsk7AlYJ/ofYTcjqdQT2ylhGYeE608VUs3LrwzIi+KAdjLvREd8GsXRm/DmcDCaWAdB04t89/1O/w1cDnyilFU=')
+print ('line.authToken')
 profile, setting, tracer = client.getProfile(), client.getSettings(), LineTracer(client)
 offbot, messageReq, wordsArray, waitingAnswer = [], {}, {}, {}
 
